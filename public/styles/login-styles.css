@@ -1,0 +1,228 @@
+
+    *{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    font-weight: 400;
+    }
+    header{
+        height:3rem;
+        width:100%;
+        background-color: white;
+        border-bottom:  0.08rem solid rgb(112, 112, 112);
+    }
+    .logos{
+        height: 2rem;
+        width:10rem;
+        margin: 0.5rem;
+    }
+
+    body{
+        background-color: rgb(68, 68, 214);
+    }
+    .animation{
+        height: 25rem;
+        width: 25rem;
+        margin: 4rem;
+    }
+    .img{
+       max-height: 35rem;
+       max-width: 30rem;
+    }
+    .container{
+        display:flex;
+        flex-direction: row;
+        background-color: rgb(185, 200, 228);
+        border-radius: 2rem;
+        height:35rem;
+        max-width: 60rem;
+        margin: auto;
+        align-self:center;
+        margin-top: 3.5rem;
+        z-index:1;
+       justify-content: space-between;
+    }
+    .login{
+       height: 35rem;
+       width: 30rem;
+       background-color: rgb(255, 255, 255);
+       border-radius: 2rem;
+       padding-left: 3rem;
+       padding-top:2rem ;
+       padding-right: 3rem;
+    }
+    h1{
+        font-weight: 700;
+        color: rgb(12, 12, 116);
+    }
+    .login-to-contine,.get-new-account{
+        font-weight: 600;
+        color: rgb(12, 12, 116);
+        font-size: 1rem;
+        padding-bottom: 2rem;
+    }
+    label{
+        font-weight: 500;
+        color: rgb(98, 98, 110);
+        font-size: 1rem;
+        padding-bottom: 2rem;
+    }
+    #email,#password{
+        height: 2.3rem;
+        width:23rem;
+        border: 0.08rem solid rgb(197, 197, 197);
+        padding-left: 1rem;
+        margin-bottom: 1.2rem;
+        border-radius: 0.2rem;
+        color:rgb(12, 12, 116);
+        font-weight: 600;
+    }
+    .keep-loggedin{
+        display: flex;
+        flex-direction:row;
+        justify-content:space-between;
+        margin-bottom:2rem;
+    }
+    a{
+        text-decoration: none;
+
+    }
+    .keep-log ,.forgot{
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: rgb(12, 12, 116);
+    }
+
+    button{
+        border: none;
+        height: 2rem;
+        width: 23rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+        cursor: pointer;
+        border-radius:0.2rem ;
+        background-color:rgb(79, 134, 252);
+        color: white;
+        margin-bottom: 1rem;
+    }
+    .or-login-with{
+        text-align: center;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: rgb(156, 156, 156);
+    }
+    .icons{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .fb,.twitter,.google{
+        background-color: none;
+        height: 2.5rem;
+        width: 2.5rem;
+        margin:1rem;
+        margin-bottom: 1.5rem;
+        border-radius: 50%;
+    }
+    .get-new-account{
+        text-align: center;
+    }
+    .create-acc{
+        font-weight: 600;
+    }
+    @media(max-width:900px){
+        .container{
+        display:flex;
+        flex-direction: column;
+        background-color: rgb(185, 200, 228);
+        border-radius: 0rem;
+        height:48rem;
+        width: 100%;
+        margin: none;
+        align-self:center;
+        margin-top: 0rem;
+        z-index:1;
+       justify-content: space-between;
+    }
+    .login{
+       height: 35rem;
+       width: 20rem;
+       background-color: rgb(255, 255, 255);
+       border-radius: 1.5rem;
+       padding-left: 2rem;
+       padding-top:1rem ;
+       padding-right: 2rem;
+       margin: auto;
+       margin-top: 7rem;
+    }
+    .img{
+       height: 3rem;
+       width: 100%;
+       display: flex;
+       justify-content: center;
+
+    }
+    .animation{
+        height: 15rem;
+        width: 15rem;
+        margin-top: 0;
+    }
+    #email,#password{
+        height: 2.5rem;
+        width:16rem;
+        border: 0.08rem solid rgb(212, 212, 212);
+        padding-left: 1rem;
+        margin-bottom: 1.0rem;
+        border-radius: 0.2rem;
+        color:rgb(12, 12, 116);
+        font-weight: 600;
+    }
+    button{
+        border: none;
+        height: 2.5rem;
+        width: 16rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius:0.2rem ;
+        background-color:rgb(79, 134, 252);
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    .login-to-contine,.get-new-account{
+        font-weight: 600;
+        color: rgb(12, 12, 116);
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+    .keep-loggedin{
+        display: flex;
+        flex-direction:row;
+        justify-content:space-between;
+        margin-bottom:2rem;
+    }
+    .forgot{
+        margin-left: 3rem;
+    }
+    }
+    .circle{
+        height: 10rem;
+        width: 20rem;
+        background-color: white;
+        border-radius: 50%;
+
+    }
+    header{
+        height:3rem;
+        width:100%;
+        background-color: white;
+        border-bottom:  0.08rem solid rgb(112, 112, 112);
+    }
+    .logos{
+        height: 2rem;
+        width:10rem;
+        margin: 0.5rem;
+    }
