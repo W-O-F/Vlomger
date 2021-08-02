@@ -33,8 +33,6 @@ mongoose.set('useCreateIndex', true);
 
 const userSchema=new mongoose.Schema({
   firstName:String,
-  username: String,
-  lastName:String,
   email:String,
   password:String,
   googleId:String,
@@ -80,7 +78,7 @@ passport.use(new GoogleStrategy({
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
-    User.findOrCreate({ googleId: profile.id, firstName: profile.givenName,lastName:profile.familyName,username:profile.emails[0].value }, function (err, user) {
+    User.findOrCreate({ googleId: profile.id,username:profile.emails[0].value }, function (err, user) {
       return cb(err, user);
     });
   }
