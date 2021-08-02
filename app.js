@@ -26,7 +26,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 // connecting to database
-mongoose.connect("mongodb://localhost:27017/blogWebDB", {
+mongoose.connect("mongodb+srv://new-user:test123@cluster0.pqa3i.mongodb.net/blogWebDB", {
   useNewUrlParser: true
 });
 mongoose.set('useCreateIndex', true);
@@ -63,7 +63,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/github/main"
+    callbackURL: "https://secure-depths-46657.herokuapp.com/auth/github/main"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({ githubId: profile.id }, function (err, user) {
@@ -76,7 +76,7 @@ passport.use(new GitHubStrategy({
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/main",
+    callbackURL: "https://secure-depths-46657.herokuapp.com/auth/google/main",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
@@ -106,9 +106,6 @@ app.get('/auth/google/main',
     res.redirect('/main');
   });
 
-
-
-
 app.get("/",function(req,res){
   res.render('index');
 });
@@ -136,6 +133,6 @@ app.get("/logout",function(req,res){
   res.redirect("/index");
 })
 
-app.listen(3000,function(req,res){
+app.listen(process.env.PORT || 3000,function(req,res){
   console.log("Server is up and running at 3000");
 });
