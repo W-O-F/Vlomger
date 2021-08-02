@@ -107,7 +107,7 @@ app.get('/auth/github/main',
   });
 
   app.get('/auth/google',
-    passport.authenticate('google', {scope: ['openid', 'email','profile']})
+    passport.authenticate('google', {scope: ['profile']})
 );
 app.get('/auth/google/main',
   passport.authenticate('google', { failureRedirect: '/login' }),
@@ -121,13 +121,13 @@ app.get('/auth/google/main',
 
   app.get('/auth/facebook/main',
     passport.authenticate('facebook', { failureRedirect: '/login' }),
-    function(req, res) {
+    function(req, res){
       // Successful authentication, redirect home.
       res.redirect('/main');
     });
 
 app.get("/",function(req,res){
-  res.render('index',{developer:"developer"});
+  res.render('index');
 });
 
 app.get("/main",function(req,res){
