@@ -11,7 +11,7 @@
 
 ### Introduction
 Immense experience can only be gained through the success and failure in the life. The learning tendency is also the thing that affect it a lot,
-Learning from others experience is a something that can be gained by anyone at any age. So, this was our motivation to create a blogging website.
+Learning from others experience is something that can be gained by anyone at any age. So, this was our motivation to create a blogging website.
 
 ### Technology used
 
@@ -27,6 +27,7 @@ Apart from it we have used the API for the weather forcast, number of cases of c
 
 ### Set-up:
  * step 1: Clone or download repository.
+ * step 2: install npm.
  * step 3: Install express using npm.
  * step 4:
  * step 5:
