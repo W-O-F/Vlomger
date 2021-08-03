@@ -7,7 +7,7 @@
 * [Technology used](#Technology-used)
 * [Features](#Features)
 * [Set-up](#Set-up)
-* [copywrite](#copywrite)
+* [Copyright](#Copyright)
 
 ### Introduction
 Immense experience can only be gained through the success and failure in the life. The learning tendency is also the thing that affect it a lot,
@@ -36,7 +36,7 @@ Apart from it we have used the API for the weather forcast, number of cases of c
  * step 9:
  * step 10:
 
- ### copyright:
+ ### Copyright:
 
 * [PRATIK ANAND](https://github.com/username)
 * [SUDHANSHU RANJAN](https://github.com/username)
