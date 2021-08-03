@@ -36,7 +36,7 @@ Apart from it we have used the API for the weather forcast, number of cases of c
  * step 9:
  * step 10:
 
-// ### copywrite:
+ ### copyright:
 
 * [PRATIK ANAND](https://github.com/username)
 * [SUDHANSHU RANJAN](https://github.com/username)
