@@ -10,8 +10,8 @@ const GitHubStrategy = require('passport-github').Strategy;
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
 
-
 const app=express();
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.set('view engine','ejs');
 app.use(express.static("public"));
@@ -32,7 +32,7 @@ mongoose.connect("mongodb+srv://new-user:test123@cluster0.pqa3i.mongodb.net/blog
 mongoose.set('useCreateIndex', true);
 
 const userSchema=new mongoose.Schema({
-  firstName:String,
+  username:String,
   email:String,
   password:String,
   googleId:String,
@@ -61,7 +61,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "https://secure-depths-46657.herokuapp.com/auth/github/main"
+    callbackURL: "https://morning-island-34453.herokuapp.com/auth/github/main"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({ githubId: profile.id }, function (err, user) {
@@ -74,11 +74,11 @@ passport.use(new GitHubStrategy({
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://secure-depths-46657.herokuapp.com/auth/google/main",
+    callbackURL: "https://morning-island-34453.herokuapp.com/auth/google/main",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
-    User.findOrCreate({ googleId: profile.id,username:profile.emails[0].value }, function (err, user) {
+    User.findOrCreate({ googleId:profile.id , username:profile.emails[0].value }, function (err, user) {
       return cb(err, user);
     });
   }
@@ -87,7 +87,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "https://secure-depths-46657.herokuapp.com/auth/facebook/main"
+    callbackURL: "https://morning-island-34453.herokuapp.com/auth/facebook/main",
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({ facebookId: profile.id }, function (err, user) {
@@ -95,6 +95,7 @@ passport.use(new FacebookStrategy({
     });
   }
 ));
+
 
 app.get('/auth/github',
   passport.authenticate('github'));
@@ -117,14 +118,15 @@ app.get('/auth/google/main',
   });
 
   app.get('/auth/facebook',
-    passport.authenticate('facebook'));
+  passport.authenticate('facebook'));
 
-  app.get('/auth/facebook/main',
-    passport.authenticate('facebook', { failureRedirect: '/login' }),
-    function(req, res){
-      // Successful authentication, redirect home.
-      res.redirect('/main');
-    });
+app.get('/auth/facebook/main',
+  passport.authenticate('facebook', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/main');
+  })
+
 
 app.get("/",function(req,res){
   res.render('index');
@@ -151,7 +153,7 @@ app.get("/signup",function(req,res){
 app.get("/logout",function(req,res){
   req.logout();
   res.redirect("/index");
-})
+});
 
 app.listen(process.env.PORT || 3000,function(req,res){
   console.log("Server is up and running at 3000");
