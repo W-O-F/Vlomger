@@ -15,12 +15,12 @@ Learning from others experience is something that can be gained by anyone at any
 
 ### Technology used
 
-For the front end part we have used HTML, CSS, javascript, jQuery and for the backend part we have used NodeJs, ExpressJs and ProjectJS.
-Our website is currently hosted on the MongoDB Atlas where the data from this website is stored.
+For the front end part we have used HTML, CSS, javascript, jQuery and for the backend part we have used NodeJs, ExpressJs and PassportJS for authentication
+Our website is currently hosted on the Heroku and database is currently on MongoDB where the data of this website is stored.
 
 
 ### Features:
-In our blogging website we have designed a login and signup page using HTML, CSS, Javascript and jQuery, and also we have integrated it with the GOOGLE, Facebook and Github.
+In our blogging website we have designed a login and signup page using HTML, CSS, Javascript and jQuery, and also we have integrated it with GOOGLE, Facebook and Github OAUTH using PassportJS
 We have created a nice UI for our website using fonts ________________, properties like ______________
 
 Apart from it we have used the API for the weather forcast, number of cases of covid in india and number of views on our website.
