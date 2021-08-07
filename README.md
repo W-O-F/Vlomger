@@ -39,7 +39,7 @@ Apart from it we have used the API for the weather forcast, number of cases of c
 
  ### Copyright:
 
-* [PRATIK ANAND](https://github.com/username)
+* [PRATIK ANAND](https://github.com/pratik8696)
 * [SUDHANSHU RANJAN](https://github.com/username)
 * [RAJ MORE](https://github.com/username)
 * [RISHABH PRAKASH](https://github.com/username)
